@@ -51,7 +51,7 @@ public class DebitCardTest {
         assertEquals(expected, actual);
     }
 
-    // Отправка полей c спецсимволами в поле Имя
+    // Отправка полей c спецсимволами в поле "Имя"
 
     @Test
     void validSpecSimvolTest() {
@@ -96,7 +96,7 @@ public class DebitCardTest {
         assertEquals(expected, actual);
     }
 
-    // Отправка полей c спецсимволами в поле номер телефона
+    // Отправка полей c спецсимволами в поле "Номер телефона"
 
     @Test
     void invalidPhoneTest() {

@@ -156,4 +156,16 @@ public class DebitCardTest {
 
         assertEquals(expected, actual);
     }
+
+    @Test
+    void checkBoxNullSelectorTest() {
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Иванов Иван");
+        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79777700707");
+        driver.findElement(By.cssSelector("button")).click();
+
+        String expected = "Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй";
+        String actual = driver.findElement(By.cssSelector("[data-test-id=agreement].input_invalid .checkbox__text")).getText();
+
+        assertEquals(expected, actual);
+    }
 }
